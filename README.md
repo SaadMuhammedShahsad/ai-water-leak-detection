@@ -1,23 +1,22 @@
 # AI Water Leak Detection System
 
-A real-time water leak detection system built with Arduino and water sensors. It detects water, decides whether it is a leak using AI-based logic, and triggers a buzzer and LED alert within 1 second.
+A real-time water leak detection system built with an ESP32 and a water sensor. When water is detected, it sounds a buzzer, turns on an LED and sends an alert message to a phone within about 1 second.
 
 ## Components
-- Arduino Nano / ESP32
-- Resistive Water Level Sensor Module
+- ESP32
+- Resistive water level sensor module
 - Buzzer
 - LED
-- Alarm that goes off
 - USB cable
 
 ## How it works
-1. The water sensor reads [analog/digital values] continuously.
-2. It is connected to the laptop and we receive message in our phone.
-3. When a leak is detected, the buzzer sounds and the LED turns on and we receive message in our phones that the water leak is detected.
+1. The ESP32 continuously reads the signal from the water sensor.
+2. The code checks the sensor reading to decide whether water is present, which means a leak.
+3. When a leak is detected, the buzzer sounds and the LED turns on.
+4. The ESP32 is connected to a laptop, and an alert message is sent to a phone to report that a leak was detected.
 
 ## Result
-Alert triggers in about 1 second after water is detected.
+The alert triggers in about 1 second after water is detected.
 
 ## Files
-- `[filename].ino`: Arduino code
-
+- `WATER_LEAK_AND_DETECTION_SYSTEM_PROJECT_FINALLL.ino`: Arduino/ESP32 code
